@@ -217,7 +217,7 @@
     // Source tracking (BRD 9) — e.g. ?src=GRID01-stand or ?utm_source=flyer
     (function setSource(){
       const params = new URLSearchParams(location.search);
-      const src = params.get('src') || params.get('utm_source') || params.get('source') || 'GRID01-flyer';
+      const src = params.get('src') || params.get('s') || params.get('utm_source') || params.get('source') || 'GRID01-flyer';
       const campaign = params.get('utm_campaign') ? `-${params.get('utm_campaign')}` : '';
       sourceField.value = src + campaign;
     })();
