@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LANI Consulting — Connect with us at GRID 01</title>
+  <meta name="description" content="Met LANI Consulting at GRID 01 Launch at Lagos Oriental Hotel? Leave your details and let us know how we can help.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="https://laniconsulting.ng/" class="logo" aria-label="LANI Consulting – home">
+        <span class="logo-mark">LC</span>
+        <span class="logo-text"><strong>LANI</strong> Consulting</span>
+      </a>
+      <div class="header-right">
+        <span class="event-badge">GRID 01 • 1 SEPT 2026</span>
+        <nav class="header-nav">
+          <a href="https://laniconsulting.ng/" target="_blank" rel="noopener">laniconsulting.ng <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <!-- Left: Plain, human copy -->
+        <div class="hero-content">
+          <span class="eyebrow">Lagos Oriental Hotel • 1 September 2026</span>
+          <h1>Good to meet you <br>at <span class="accent">GRID 01.</span></h1>
+          
+          <p class="lead">
+            Thanks for scanning our QR. GRID 01 is organised by <strong>AUB Innovation Park</strong> and <strong>AXON</strong> — a new platform connecting founders, capital and markets across Africa.
+          </p>
+          <p class="lead small">
+            We're <strong>LANI Consulting</strong>. We work with businesses, government and non-profits on strategy, human capital, finance & tax, tech, sustainability and agriculture. If you picked up our flyer or stopped by our stand, this form is the fastest way to stay in touch — no business card needed.
+          </p>
+
+          <div class="event-banner">
+            <div class="event-banner-icon"><i class="fa-regular fa-calendar"></i></div>
+            <div>
+              <strong>GRID 01 Launch</strong>
+              <span>AUB Innovation Park (iPark) × AXON — Lagos Oriental Hotel</span>
+            </div>
+          </div>
+
+          <ul class="benefits">
+            <li><span class="check"><i class="fa-solid fa-check"></i></span> 30 seconds — just 3 fields</li>
+            <li><span class="check"><i class="fa-solid fa-check"></i></span> Goes straight to our team (no manual typing later)</li>
+            <li><span class="check"><i class="fa-solid fa-check"></i></span> We'll get back to you quickly</li>
+          </ul>
+
+          <div class="trust-row">
+            <div class="trust-item"><strong>50+</strong><span>Happy Clients</span></div>
+            <div class="divider"></div>
+            <div class="trust-item"><strong>15+</strong><span>Years</span></div>
+            <div class="divider"></div>
+            <div class="trust-item"><strong>35+</strong><span>Projects</span></div>
+          </div>
+
+          <div class="event-meta">
+            <div class="meta-card">
+              <i class="fa-regular fa-clock"></i>
+              <div><small>Date</small><strong>1 September 2026</strong></div>
+            </div>
+            <div class="meta-card">
+              <i class="fa-solid fa-location-dot"></i>
+              <div><small>Venue</small><strong>Lagos Oriental Hotel, Lagos</strong></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Form — BRD exact fields -->
+        <div class="form-wrapper">
+          <div class="form-card">
+            <div class="form-header">
+              <div class="qr-hint"><i class="fa-solid fa-qrcode"></i> You scanned our flyer — this takes 30 seconds</div>
+              <h2>Leave your details</h2>
+              <p>Tell us how we can help and we'll be in touch.</p>
+            </div>
+
+            <!-- CONFIG: set your endpoint in the script at the bottom -->
+            <form id="eventForm" novalidate autocomplete="on">
+              <!-- Honeypot — leave empty (spam protection per NFR) -->
+              <input type="text" name="website" id="honeypot" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-5000px;opacity:0;height:0;width:0;">
+
+              <!-- Hidden source tracking (BRD 9) — auto-filled from URL -->
+              <input type="hidden" id="source" name="source" value="GRID01-flyer">
+
+              <div class="field">
+                <label for="name">Name <span class="req">*</span></label>
+                <div class="input-wrap">
+                  <i class="fa-regular fa-user"></i>
+                  <input type="text" id="name" name="name" placeholder="Your name" required autocomplete="name" />
+                </div>
+                <span class="error" id="nameError"></span>
+              </div>
+
+              <div class="field">
+                <label for="email">Email <span class="req">*</span></label>
+                <div class="input-wrap">
+                  <i class="fa-regular fa-envelope"></i>
+                  <input type="email" id="email" name="email" placeholder="you@company.com" required autocomplete="email" inputmode="email" />
+                </div>
+                <span class="error" id="emailError"></span>
+              </div>
+
+              <div class="field">
+                <label for="help">How would you like us to help you? <span class="req">*</span></label>
+                <p class="field-desc">Tap one below or type your own.</p>
+                <div class="chips" id="chips" role="group" aria-label="Quick options">
+                  <button type="button" class="chip" data-value="Management Strategy">Strategy</button>
+                  <button type="button" class="chip" data-value="Human Capital Development">Human Capital</button>
+                  <button type="button" class="chip" data-value="Financial & Tax Advisory">Finance & Tax</button>
+                  <button type="button" class="chip" data-value="Sustainability / ESG">Sustainability</button>
+                  <button type="button" class="chip" data-value="Fintech">Fintech</button>
+                  <button type="button" class="chip" data-value="Agriculture Consulting">Agriculture</button>
+                  <button type="button" class="chip" data-value="IT & Digital">IT & Digital</button>
+                  <button type="button" class="chip" data-value="Training & Capacity Building">Training</button>
+                </div>
+                <textarea id="help" name="help" rows="4" placeholder="For example: need help with market entry strategy for my startup..." required maxlength="500"></textarea>
+                <div class="textarea-meta">
+                  <span class="error" id="helpError"></span>
+                  <span class="char-count" id="charCount">0 / 500</span>
+                </div>
+              </div>
+
+              <div class="field checkbox">
+                <label class="checkbox-label">
+                  <input type="checkbox" id="consent" required />
+                  <span>I agree to be contacted about my enquiry.</span>
+                </label>
+                <span class="error" id="consentError"></span>
+              </div>
+
+              <button type="submit" class="btn-submit" id="submitBtn">
+                <span class="btn-text">Submit</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+
+              <p class="form-footer">
+                <i class="fa-solid fa-lock"></i> We only use this to follow up. You'll get a confirmation, then we'll take you to our main site.
+              </p>
+              <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+            </form>
+          </div>
+          <p class="below-card">Prefer email? <a href="mailto:hello@laniconsulting.ng">hello@laniconsulting.ng</a> • <a href="https://laniconsulting.ng/contact" target="_blank" rel="noopener">Contact page</a></p>
+          <!-- Easy for non-technical staff to edit: just change text above. Data handling is automatic. -->
+        </div>
+      </div>
+    </section>
+
+    <section class="strip">
+      <div class="container strip-inner">
+        <p>LANI Consulting — member of Lani Group</p>
+        <div class="strip-tags">
+          <span>Public Sector</span>
+          <span>Private Sector</span>
+          <span>NGOs</span>
+          <span>Development Partners</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="how-it-works">
+      <div class="container">
+        <h3>How it works</h3>
+        <div class="steps">
+          <div class="step"><span>1</span><p><strong>Scan</strong> QR on flyer or stand</p></div>
+          <div class="step"><span>2</span><p><strong>Fill 3 fields</strong></p></div>
+          <div class="step"><span>3</span><p><strong>We follow up</strong></p></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="successModal" class="modal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-content">
+      <div class="modal-icon"><i class="fa-solid fa-check"></i></div>
+      <h3>Thank you — a member of our team will be in touch shortly.</h3>
+      <p>We've got your details. Redirecting to our website...</p>
+      <div class="loader" aria-hidden="true"></div>
+      <a href="https://laniconsulting.ng/" class="modal-link">Go now <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+  </div>
+
+   <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; 2026 LANI Consulting. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="https://laniconsulting.ng/" target="_blank" rel="noopener">laniconsulting.ng</a>
+        <a href="/api/leads" style="opacity:0.6">Admin</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Vercel — server stores centrally at /api/submit (no localStorage)
+    const ENDPOINT = '/api/submit';
+    const REDIRECT_URL = 'https://laniconsulting.ng/';
+    // ================================================================
+
+    const form = document.getElementById('eventForm');
+    const modal = document.getElementById('successModal');
+    const chips = document.querySelectorAll('.chip');
+    const helpField = document.getElementById('help');
+    const charCount = document.getElementById('charCount');
+    const sourceField = document.getElementById('source');
+    const statusEl = document.getElementById('formStatus');
+
+    // Source tracking (BRD 9) — e.g. ?src=GRID01-stand or ?utm_source=flyer
+    (function setSource(){
+      const params = new URLSearchParams(location.search);
+      const src = params.get('src') || params.get('utm_source') || params.get('source') || 'GRID01-flyer';
+      const campaign = params.get('utm_campaign') ? `-${params.get('utm_campaign')}` : '';
+      sourceField.value = src + campaign;
+    })();
+
+    chips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        chip.classList.toggle('active');
+        const active = [...document.querySelectorAll('.chip.active')].map(c => c.dataset.value);
+        if(active.length) helpField.value = active.join(', ');
+        else if([...chips].some(c => c.dataset.value === helpField.value.trim())) helpField.value = '';
+        helpField.dispatchEvent(new Event('input'));
+        helpField.focus();
+      });
+    });
+
+    helpField.addEventListener('input', () => {
+      charCount.textContent = helpField.value.length + ' / 500';
+    });
+
+    function showError(id, msg){ document.getElementById(id).textContent = msg; }
+    function clearErrors(){ ['nameError','emailError','helpError','consentError'].forEach(id=>showError(id,'')); statusEl.textContent=''; }
+
+    let submitting = false;
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      if(submitting) return;
+      clearErrors();
+
+      if(document.getElementById('honeypot').value){ return; } // bot
+
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const help = helpField.value.trim();
+      const source = sourceField.value.trim();
+      const consent = document.getElementById('consent').checked;
+
+      let valid = true;
+      if(name.length < 2){ showError('nameError','Please enter your name.'); valid=false; }
+      if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){ showError('emailError','Enter a valid email.'); valid=false; }
+      if(help.length < 10){ showError('helpError','Tell us a bit more — at least 10 characters.'); valid=false; }
+      if(!consent){ showError('consentError','Please agree to be contacted.'); valid=false; }
+      if(!valid) return;
+
+      submitting = true;
+      const btn = document.getElementById('submitBtn');
+      btn.disabled = true;
+      btn.innerHTML = '<span class="btn-text">Sending...</span> <i class="fa-solid fa-spinner fa-spin"></i>';
+      statusEl.textContent = 'Saving your details...';
+
+      const payload = {
+        name, email, help,
+        source,
+        timestamp: new Date().toISOString(),
+        page: location.href,
+        userAgent: navigator.userAgent
+      };
+
+      // POST to Vercel server — central store (never localStorage)
+      try{
+        const res = await fetch(ENDPOINT, { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(payload) });
+        const j = await res.json().catch(()=>({}));
+        if (!res.ok || !j.ok) throw new Error(j.error || 'Server error '+res.status);
+      }catch(err){
+        console.error('Server save failed:', err);
+        statusEl.textContent = '';
+        const msg = err.message.includes('Too many') ? err.message : 'Could not save — please check connection and try again, or email hello@laniconsulting.ng';
+        showError('helpError', msg);
+        btn.disabled = false;
+        btn.innerHTML = '<span class="btn-text">Submit</span> <i class="fa-solid fa-arrow-right"></i>';
+        submitting = false;
+        return;
+      }
+
+      // BRD FR-04: confirmation
+      modal.classList.add('show');
+      modal.setAttribute('aria-hidden','false');
+      statusEl.textContent = '';
+      setTimeout(()=>{ window.location.href = REDIRECT_URL; }, 1800);
+    });
+
+    modal.addEventListener('click', (e)=>{ if(e.target===modal) window.location.href = REDIRECT_URL; });
+    document.addEventListener('keydown', (e)=>{ if(e.key==='Escape' && modal.classList.contains('show')) window.location.href = REDIRECT_URL; });
+  </script>
+</body>
+</html>
